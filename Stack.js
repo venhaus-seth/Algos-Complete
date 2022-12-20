@@ -22,7 +22,8 @@ class Stack {
      * @returns {number} The new length of this stack.
      */
     push(item) {
-      return this.items.push(item)
+      this.Stack.push(item)
+      return this.size()
     }
   
     /**
@@ -52,7 +53,7 @@ class Stack {
      * @returns {boolean}
      */
     isEmpty() {
-      return this.items.length == 0 ? true : false 
+      return this.items ? true : false 
     }
   
     /**
