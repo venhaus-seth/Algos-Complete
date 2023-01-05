@@ -1,9 +1,7 @@
-var getRow = function(rowIndex) {
-
-    if (rowIndex === 0) return [1]
+var generate = function(numRows) {
+    if (numRows === 1) return [[1]]
     let output = [[1]]
-    
-    for (let i = 1; i < rowIndex + 1; i++) {
+    for (let i = 1; i < numRows; i++) {
         let tempArr = []
         for (let j = 0; j <= i; j++) {
             if (j=== 0 || j === i) {
@@ -14,13 +12,12 @@ var getRow = function(rowIndex) {
         }
         output.push(tempArr)
     }
-    return output[output.length - 1]
-    
+    return output
 };
 
 n = 1
 m = 5
 o = 10
-console.log(getRow(n))
-console.log(getRow(m))
-console.log(getRow(o))
+console.log(generate(n))
+console.log(generate(m))
+console.log(generate(o))
